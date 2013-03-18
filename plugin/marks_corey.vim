@@ -1,6 +1,6 @@
 " Vim plugin for showing marks using number array.
 " Maintainer: Hongli Gao <left.slipper at gmail dot com>
-" Last Change: 17 Mar 2013.
+" Last Change: 18 Mar 2013.
 " Version: 1.4
 "
 " USAGE:
@@ -414,7 +414,7 @@ nnoremap <silent> <script> <Plug>number-marks-move-sign :call Move_sign()<cr>
 nnoremap <silent> <script> <Plug>number-marks-savep :call SaveP()<cr>
 nnoremap <silent> <script> <Plug>number-marks-reloadp :call Reload()<cr>
 
-if get(g:, 'g:number_marks_no_default_key_mappings', 0)
+if !get(g:, 'g:number_marks_no_default_key_mappings', 0)
   if !hasmapto('<Plug>number-marks-place-sign')
     nmap <unique> <c-F2> <Plug>number-marks-place-sign
     nmap <silent> <unique> mm <Plug>number-marks-place-sign
